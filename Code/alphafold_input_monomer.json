@@ -1,0 +1,14 @@
+{
+  "name": "CA2",
+  "sequences": [
+    {
+      "protein": {
+        "id": ["A"],
+        "sequence": "MSHHWGYGKHNGPEHWHKDFPIAKGERQSPVDIDTHTAKYDPSLKPLSVSYDQATSLRILNNGHAFNVEFDDSQDKAASLGSLEHQIWGFWESCAAT"
+      }
+    }
+  ],
+  "modelSeeds": [1],
+  "dialect": "alphafold3",
+  "version": 1
+}

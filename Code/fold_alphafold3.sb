@@ -1,0 +1,18 @@
+#!/bin/bash --login
+#SBATCH --job-name alphafold
+#SBATCH --time=3:59:00
+#SBATCH --gres=gpu:1
+#SBATCH -C [amd21|intel21]
+#SBATCH --cpus-per-task=8
+#SBATCH --mem=64G
+
+export AF3_RESOURCES_DIR=/mnt/research/woldring_lab/AlphaFold3
+export AF3_IMAGE=${AF3_RESOURCES_DIR}/image/alphafold3.sif
+export AF3_CODE_DIR=${AF3_RESOURCES_DIR}/code
+export AF3_INPUT_DIR=${AF3_RESOURCES_DIR}/inputs
+export AF3_OUTPUT_DIR=${AF3_RESOURCES_DIR}/outputs
+export AF3_MODEL_PARAMETERS=${AF3_RESOURCES_DIR}/weights
+export AF3_DATABASES_DIR=/mnt/research/common-data/alphafold/database_3 
+
+singularity exec --nv --bind $AF3_INPUT_DIR:/root/af_input --bind $AF3_OUTPUT_DIR:/root/af_output --bind $AF3_MODEL_PARAMETERS:/root/models --bind $AF3_DATABASES_DIR:/root/public_databases $AF3_IMAGE python ${AF3_CODE_DIR}/alphafold3/run_alphafold.py --json_path=/root/af_input/oatp1b1_aspirin_protein_ligand.json --model_dir=/root/models -db_dir=/root/public_databases --output_dir=/root/af_output
+
