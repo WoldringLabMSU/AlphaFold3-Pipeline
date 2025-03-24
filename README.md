@@ -10,13 +10,11 @@ This guide will cover monomer, monomer-ligand complex, and multimer prediction.
 
 1. Ensure you have HPCC OnDemand access and that you can navigate to the Woldring Lab research directory. 
 
-(put picture here)
+![Alt text]((https://github.com/WoldringLabMSU/AlphaFold3-Pipeline/blob/main/pictures/ss1.png))
 
 Figure 1. Research directory in main HPCC OnDemand menu.  
 
-2. Ensure that the AlphaFold3 directory appears. 
-
-(put picture here)
+![Alt text]((https://github.com/WoldringLabMSU/AlphaFold3-Pipeline/blob/main/pictures/ss2.png))
 
 Figure 2. AlphaFold3 directory in the Woldring Lab research space. 
 
@@ -26,13 +24,13 @@ Figure 2. AlphaFold3 directory in the Woldring Lab research space.
 
 2. Navigate inside the ‘inputs’ directory.  
 
-(put picture here)
+![Alt text]((https://github.com/WoldringLabMSU/AlphaFold3-Pipeline/blob/main/pictures/ss3.png))
 
 Figure 3. Inside of AlphaFold3 directory, which contains the ‘inputs’ directory. 
 
 3. Inside of the ‘inputs’ directory there are three JSON files. These are named for the three different types of predictions that are discussed in this tutorial. They are also formatted differently based on the type of prediction they are meant for. We will first look at the JSON file intended for monomer structure prediction.    
 
-(picture)
+![Alt text]((https://github.com/WoldringLabMSU/AlphaFold3-Pipeline/blob/main/pictures/ss4.png))
 
 Figure 4. Example JSON file used for monomeric protein structure prediction (called alphafold_input_monomer.json) 
 
@@ -45,18 +43,18 @@ Figure 4. Example JSON file used for monomeric protein structure prediction (cal
 
 7. Go into the main AlphaFold3 directory and open the file called ‘fold_alphafold3.sb’ 
 
-(picture)
+![Alt text]((https://github.com/WoldringLabMSU/AlphaFold3-Pipeline/blob/main/pictures/ss5.png))
 
 Figure 5. Job file that you will run within the main AlphaFold3 directory. 
 
-(picture)
+![Alt text]((https://github.com/WoldringLabMSU/AlphaFold3-Pipeline/blob/main/pictures/ss6.png))
 
 Figure 6. Job file you will run called ‘fold_alphafold3.sb’. Note that by default, the name of the JSON file it refers to is alphafold_input.json. Change this to the name of the JSON file you want to use as an input. This should be the only thing you need to change. 
 
  
 8. Change the name of the JSON file as indicated in Figure 6 if needed. Save the change and upload the file again to your main AlphaFold3 directory. Now you can run the job! Simply type ‘sbatch fold_alphafold3.sb’ into your command prompt to submit the job, and ‘qs’ to check its status.  
 
-(pciture)
+![Alt text](https://github.com/WoldringLabMSU/AlphaFold3-Pipeline/blob/main/pictures/ss7.png)
 
 Figure 7. Example of the job submission command being entered. 
 
@@ -70,7 +68,7 @@ Figure 7. Example of the job submission command being entered.
 
 2. Open the JSON file called alphafold_input_protein-ligand_complex.json 
 
-(picture)
+![Alt text](https://github.com/WoldringLabMSU/AlphaFold3-Pipeline/blob/main/pictures/ss8.png)
 
 Figure 8. Example JSON file for protein-ligand complex prediction (alphafold_input_protein-ligand_complex.json) 
 
@@ -92,7 +90,7 @@ Figure 8. Example JSON file for protein-ligand complex prediction (alphafold_inp
 
 2. Open the JSON file called alphafold_input_multimer.json 
 
-(picture)
+![Alt text]((https://github.com/WoldringLabMSU/AlphaFold3-Pipeline/blob/main/pictures/ss9.png))
 
 Figure 9. Example JSON file for multimer submission. Note the different protein chains. 
 
@@ -100,7 +98,7 @@ Figure 9. Example JSON file for multimer submission. Note the different protein 
 
 4. If you want to predict a complex with more than two protein chains or a complex with multiple protein chains and ligands, you need to add new elements to the JSON file. Each element starts with a bracket “{“, is followed by a label (e.g., “protein”), which is followed by an ID (e.g., [“A”], [“B”], etc.), a sequence or SMILES string, and it ends with a closing bracket “}”. If there are other elements that follow, the last bracket is followed by a comma. Figure 10 below shows an example of a JSON file for a trimeric protein in complex with a small molecule. Pay very close attention to the number, type, and formatting of the brackets for each element. 
 
-(picture)
+![Alt text](https://github.com/WoldringLabMSU/AlphaFold3-Pipeline/blob/main/pictures/ss10.png)
 
 Figure 10. Example JSON file for trimeric protein complexed with a ligand. 
 
@@ -109,7 +107,7 @@ Figure 10. Example JSON file for trimeric protein complexed with a ligand.
 6. Go into the main AlphaFold3 directory and open the job file called ‘fold_alphafold3.sb’. Edit the name of the JSON file in this job script to the name of the JSON file you made for your multimer prediction (as shown in Steps 7 and 8 and Figure 6 of the Monomer section). Save this new job file and upload it into the main AlphaFold3 directory where it was before. Submit the job file as indicated in Steps 8 and 9 of the Monomer section. 
 <span style="color: red;"> -NOTE: If you have a multimer with multiple identical chains (e.g., a homodimer, homotrimer, etc.), you do not need to enter each chain as a separate element in the JSON file. You can simply add letters to the “id” field. See Figure 11 below for an example JSON file for a homodimer. </span> 
 
-(picture)
+![Alt text](https://github.com/WoldringLabMSU/AlphaFold3-Pipeline/blob/main/pictures/ss11.png)
 
 Figure 11. Example JSON file for homodimer. Note the addition of an extra letter in the “id” field. 
 
@@ -117,7 +115,7 @@ Figure 11. Example JSON file for homodimer. Note the addition of an extra letter
 
 1. Once your job finishes running (which you can check with the ‘qs’ command), navigate to the ‘outputs’ directory within the main AlphaFold3 folder. 
 
-(picture)
+![Alt text]((https://github.com/WoldringLabMSU/AlphaFold3-Pipeline/blob/main/pictures/ss12.png))
 
 Figure 12. Location of ‘outputs’ directory within the main AlphaFold3 folder. 
 
@@ -125,7 +123,7 @@ Figure 12. Location of ‘outputs’ directory within the main AlphaFold3 folder
 
 3. If you enter these directories, you will see the following: 
 
-(pciture)
+![Alt text]((https://github.com/WoldringLabMSU/AlphaFold3-Pipeline/blob/main/pictures/ss13.png))
 
 Figure 13. Example results directory. 
 
