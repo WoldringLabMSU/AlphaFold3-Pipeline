@@ -1,4 +1,4 @@
-# AlphaFold3-Pipeline
+# Comprehensive guide for MSU HPCC OnDemand users
 ### By Theodore Belecciu (@Theodor-ator) and Alex Aljets (@alexaljets)
 ##### Last updated 3/23/2025
 
