@@ -14,11 +14,13 @@ This guide will cover monomer, monomer-ligand complex, and multimer prediction.
 
 2. Inside of the ‘inputs’ directory upload your JSON file. They are also formatted differently based on the type of prediction they are meant for. Change the name of the protein in the “name” field and other relevant information as shown below.
 
-3. Go into the main AlphaFold3 directory and open `fold_alphafold3.sb` 
+3. Go into the main AlphaFold3 directory and open `fold_alphafold3.sb`.
 
-4. Change the name of the JSON file it refers to to the name of the JSON file you want to use as an input. Save the change and upload the file again to your main AlphaFold3 directory.
+4. Within `fold_alphafold3.sb`, change the name of the JSON file it refers to to the name of the JSON file you want to use as an input. Save the change and upload the file again to your main AlphaFold3 directory.
 
-5. Type `sbatch fold_alphafold3.sb` into your command prompt to submit the job, and `qs` to check its status.  
+5. Type `sbatch fold_alphafold3.sb` into your command prompt to submit the job, and `qs` to check its status.
+
+6. View the results in the ‘outputs’ directory.
 
 **For monomers,** open the JSON file called `alphafold_input_monomer.json`. 
 This is the exact format you will need if you want to predict the structure of a monomeric (i.e., single-chain) protein. You will simply need to change the amino acid sequence in the “sequence” field to that of the protein you desire to predict. 
