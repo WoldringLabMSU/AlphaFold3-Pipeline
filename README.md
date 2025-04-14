@@ -4,7 +4,7 @@
 
 This page provides a quick overview of command line usage and requirements for running AlphaFold3 on the MSU HPCC. For comprehensive documentation, please see the full guide, named ["comprehensive_guide.md"](https://github.com/WoldringLabMSU/AlphaFold3-Pipeline/blob/main/comprehensive_guide.md).
 
-This basic guide will explain how you can run structure predictions with AlphaFold3 on HPCC. AlphaFold3 has been installed in the Woldring Lab research directory (/mnt/research/woldring_lab), and it is now available for everyone added to the lab research account. 
+This basic guide will explain how you can run structure predictions with AlphaFold3 on HPCC. AlphaFold3 has been installed in the Woldring Lab research directory (`/mnt/research/woldring_lab`), and it is now available for everyone added to the lab research account. 
 
 This guide will cover monomer, monomer-ligand complex, and multimer prediction.
 
@@ -14,7 +14,7 @@ This guide will cover monomer, monomer-ligand complex, and multimer prediction.
 
 2. Inside of the ‘inputs’ directory there are three JSON files. They are also formatted differently based on the type of prediction they are meant for. Change the name of the protein in the “name” field and other relevant information as follows:
 
-2a. For monomers, open the JSON file called **alphafold_input_monomer.json**. 
+2a. For monomers, open the JSON file called `alphafold_input_monomer.json`. 
 This is the exact format you will need if you want to predict the structure of a monomeric (i.e., single-chain) protein. You will simply need to change the amino acid sequence in the “sequence” field to that of the protein you desire to predict. 
 <span style="color: red;">-NOTE: AlphaFold3 is VERY picky about the formatting of this JSON file. It does not tolerate spaces, line indents, line breaks, or any other deviations. When you paste your sequence, make sure it is all on ONE line. For large sequences, use your Backspace/Delete key at the beginning of each line that your pasted sequence is in to check for spaces (don’t assume that the sequence will paste on one line just because the source you copied it from had it on one line). </span>
 
@@ -22,7 +22,7 @@ This is the exact format you will need if you want to predict the structure of a
 
 Figure 1. Example JSON file used for monomeric protein structure prediction (called alphafold_input_monomer.json) 
 
-2b. For protein-ligand complexes, open the JSON file called **alphafold_input_protein-ligand_complex.json**. 
+2b. For protein-ligand complexes, open the JSON file called `alphafold_input_protein-ligand_complex.json`. 
 Change the field after “sequence” to the sequence of your protein of interest. Properly format your sequence. 
 Change the field after “smiles” to the SMILES string of your ligand of interest.
 
@@ -30,7 +30,7 @@ Change the field after “smiles” to the SMILES string of your ligand of inter
 
 Figure 2. Example JSON file for protein-ligand complex prediction (alphafold_input_protein-ligand_complex.json) 
 
-2c. For multimers, open the JSON file called **alphafold_input_multimer.json**. 
+2c. For multimers, open the JSON file called `alphafold_input_multimer.json`. 
 If your desired protein has two chains, (i.e., a dimer) you can use the JSON file exactly as it is, simply replacing the amino acid sequences with those of your chains.
 If you want to predict a complex with more than two protein chains or a complex with multiple protein chains and ligands, you need to add new elements to the JSON file. Each element starts with a bracket “{“, is followed by a label (e.g., “protein”), which is followed by an ID (e.g., [“A”], [“B”], etc.), a sequence or SMILES string, and it ends with a closing bracket “}”. If there are other elements that follow, the last bracket is followed by a comma. Figure 10 below shows an example of a JSON file for a trimeric protein in complex with a small molecule. Pay very close attention to the number, type, and formatting of the brackets for each element. 
 
