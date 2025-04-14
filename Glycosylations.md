@@ -2,7 +2,7 @@
 ### By Theodore Belecciu (@Theodor-ator) and Alex Aljets (@alexaljets)
 ##### Last updated 4/14/2025
 
-Note: The easiest way to model glycosylated protein structures (glycoproteins) is with a web server made by DeepMind called AlphaFold Server. This server should be good for most applications (glycosylated monomers, glycosylated multimers, monomers or multimers with multiple glycans, etc.), but it can’t handle glycans with more than 8 residues (i.e., sugar units like mannose, fucose, GlcNAc). This guide is for modeling glycans with more than 8 residues.
+*Note*: The easiest way to model glycosylated protein structures (glycoproteins) is with a web server made by DeepMind called AlphaFold Server. This server should be good for most applications (glycosylated monomers, glycosylated multimers, monomers or multimers with multiple glycans, etc.), but it can’t handle glycans with more than 8 residues (i.e., sugar units like mannose, fucose, GlcNAc). This guide is for modeling glycans with more than 8 residues.
 
 To use AlphaFold3 on the MSU HPCC, you will need to have an MSU HPCC account, and you will also need access to the Woldring Lab HPCC account. You will not need anything else, since AlphaFold 3 and all of its dependencies are there. You will need PyMOL or another molecular visualization tool to see your results at the end. 
 
