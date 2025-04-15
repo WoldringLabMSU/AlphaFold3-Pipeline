@@ -70,33 +70,33 @@ NOTE: The amino acid atoms that bond to glycans (e.g., ND2) have very specific n
 
 18. Once you finish editing your JSON file, you should change the “name” field to something identifiable and different from “Glycan_second_success”. This will be the name your results directory will appear under in the “outputs” directory: 
 
-![Alt text](https://github.com/WoldringLabMSU/AlphaFold3-Pipeline/blob/main/pictures/g11.png)
+![Alt text](https://github.com/WoldringLabMSU/AlphaFold3-Pipeline/blob/main/pictures/g19.png)
 
 19. You now should be finished with the JSON file. Save it, name it whatever you want, and upload it into the inputs directory within the AlphaFold3 directory (see image below) 
 
-![Alt text](https://github.com/WoldringLabMSU/AlphaFold3-Pipeline/blob/main/pictures/g12.png)
+![Alt text](https://github.com/WoldringLabMSU/AlphaFold3-Pipeline/blob/main/pictures/g11.png)
 
 20. Now you are almost ready to submit the job! Navigate into the main AlphaFold3 directory and locate the docking job file called `fold_alphafold3_glycan.sb`
 
-![Alt text](https://github.com/WoldringLabMSU/AlphaFold3-Pipeline/blob/main/pictures/g13.png)
+![Alt text](https://github.com/WoldringLabMSU/AlphaFold3-Pipeline/blob/main/pictures/g12.png)
 
 21. Download this file onto your computer and open it in a text editor. It should look like the following. 
 
-![Alt text](https://github.com/WoldringLabMSU/AlphaFold3-Pipeline/blob/main/pictures/g14.png)
+![Alt text](https://github.com/WoldringLabMSU/AlphaFold3-Pipeline/blob/main/pictures/g13.png)
 
 22. In this file, locate the string ‘AF3_throwaway.json’, and replace it with the exact name of the JSON file you just created and uploaded into inputs. Save the edited file and upload it into the main AlphaFold3 directory. Feel free to name it whatever you want, but make sure it has the .sb extension. 
 
 23. Now, you’re ready to submit the AlphaFold3 job! Open a terminal window while you’re in the main AlphaFold3 directory. 
 
-![Alt text](https://github.com/WoldringLabMSU/AlphaFold3-Pipeline/blob/main/pictures/g15.png)
+![Alt text](https://github.com/WoldringLabMSU/AlphaFold3-Pipeline/blob/main/pictures/g14.png)
 
 24. After the terminal window loads, simply type `sbatch [exact name of the docking job file you just uploaded into the AlphaFold3 directory]`. For example, if you named the file `AF3_job.sb`, you would simply type `sbatch AF3_job.sb` (see below). Hit ENTER, and you’re good to go! 
 
-![Alt text](https://github.com/WoldringLabMSU/AlphaFold3-Pipeline/blob/main/pictures/g16.png)
+![Alt text](https://github.com/WoldringLabMSU/AlphaFold3-Pipeline/blob/main/pictures/g15.png)
 
 25. You can check the status of your job with the `qs` command. If you get something like the following, it means the job is either running or preparing to run: 
 
-![Alt text](https://github.com/WoldringLabMSU/AlphaFold3-Pipeline/blob/main/pictures/g17.png)
+![Alt text](https://github.com/WoldringLabMSU/AlphaFold3-Pipeline/blob/main/pictures/g16.png)
 
 26. The job should take around 30 minutes. The results will appear in the 'outputs' directory in a directory named after what you specified in the “name” field of the JSON file you uploaded. 
 
