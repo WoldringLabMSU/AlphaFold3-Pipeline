@@ -104,4 +104,4 @@ NOTE: The amino acid atoms that bond to glycans (e.g., ND2) have very specific n
 
 27. Inside the results folder, you’ll see something like in the image below. The most important file by far is the `.cif` model. You can download this structure and visualize it with tools like PyMOL. Thus you will be able to see your glycosylated protein structure.  
 
-![Alt text](https://github.com/WoldringLabMSU/AlphaFold3-Pipeline/blob/main/pictures/g17.png)
+![Alt text](https://github.com/WoldringLabMSU/AlphaFold3-Pipeline/blob/main/pictures/g18.png)
